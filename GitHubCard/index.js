@@ -66,6 +66,12 @@ function newCards() {
   const followers = document.createElement('p');
   const following = document.createElement('p');
   const bio = document.createElement('p');
+
+  // class lists
+  card.classList.add('card');
+  cardInfo.classList.add('card-info');
+  name.classList.add('name');
+  userName.classList.add('username');
 }
 
 /* List of LS Instructors Github username's: 
