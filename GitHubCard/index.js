@@ -2,11 +2,13 @@
            (replacing the palceholder with your Github name):
            https://api.github.com/users/<your name>
 */
-const axios = require('axios').default;
+// const axios = require('axios').default;
 
 axios.get("https://api.github.com/users/meeka73")
   .then((response) => {
-    console.log(response);
+    console.log(response.data);
+    const newCard = newCards(response.data)
+    document.querySelector(".cards").appendChild(newCard)
   })
   .catch((err) => {
     console.log("The data was not returned", err);
@@ -95,7 +97,11 @@ function newCards(data) {
   cardInfo.append(followers);
   cardInfo.append(following);
   cardInfo.append(bio);
+
+  return card;
 }
+
+// const entryPoint = document.querySelector('.cards');
 
 /* List of LS Instructors Github username's: 
   tetondan
