@@ -54,7 +54,7 @@ const followersArray = [];
 </div>
 */
 
-function newCards() {
+function newCards(data) {
   const card = document.createElement('div');
   const image = document.createElement('img');
   const cardInfo = document.createElement('div');
@@ -72,6 +72,17 @@ function newCards() {
   cardInfo.classList.add('card-info');
   name.classList.add('name');
   userName.classList.add('username');
+
+  // add data
+  image.src = data.avatar_url
+  name.textContent = data.name
+  userName.textContent = data.login
+  location.textContent = "Location:" + data.location
+  profile.textContent = "Profile: "
+  anchor.textContent = data.url
+  followers.textContent = "Followers: " + data.followers
+  following.textContent = "Following: " + data.following
+  bio.textContent = "Bio: " + data.bio
 }
 
 /* List of LS Instructors Github username's: 
