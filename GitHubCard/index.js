@@ -83,6 +83,18 @@ function newCards(data) {
   followers.textContent = "Followers: " + data.followers
   following.textContent = "Following: " + data.following
   bio.textContent = "Bio: " + data.bio
+
+  // append
+  card.append(image);
+  card.append(cardInfo);
+  cardInfo.append(name);
+  cardInfo.append(userName);
+  cardInfo.append(location);
+  cardInfo.append(profile);
+  profile.append(anchor);
+  cardInfo.append(followers);
+  cardInfo.append(following);
+  cardInfo.append(bio);
 }
 
 /* List of LS Instructors Github username's: 
